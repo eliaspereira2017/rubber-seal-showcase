@@ -10,6 +10,11 @@ import Servicos from "./pages/Servicos";
 import Compliance from "./pages/Compliance";
 import Contato from "./pages/Contato";
 import NotFound from "./pages/NotFound";
+import ProdutosCadastro from "./pages/ProdutosCadastro";
+import ProdutosListagem from "./pages/ProdutosListagem";
+import ProdutosCategorias from "./pages/ProdutosCategorias";
+import RelatoriosEstoque from "./pages/RelatoriosEstoque";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +31,38 @@ const App = () => (
           <Route path="/servicos" element={<Servicos />} />
           <Route path="/compliance" element={<Compliance />} />
           <Route path="/contato" element={<Contato />} />
+          <Route
+            path="/produtos/cadastro"
+            element={
+              <ProtectedRoute permission="products.create">
+                <ProdutosCadastro />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/produtos/listagem"
+            element={
+              <ProtectedRoute permission="products.read">
+                <ProdutosListagem />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/produtos/categorias"
+            element={
+              <ProtectedRoute permission="products.categories">
+                <ProdutosCategorias />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/produtos/relatorios-estoque"
+            element={
+              <ProtectedRoute permission="inventory.reports">
+                <RelatoriosEstoque />
+              </ProtectedRoute>
+            }
+          />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
