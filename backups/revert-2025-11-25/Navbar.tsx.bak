@@ -22,7 +22,6 @@ const Navbar = () => {
     { name: "Tecnologias", path: "/tecnologias" },
     { name: "Serviços", path: "/servicos" },
     { name: "Compliance", path: "/compliance" },
-   // { name: "Contato", path: "/contato" }, // [Comentário adicionado] - Item do menu que direciona para a página de contato (/contato), parte do array de navegação usado para renderizar links no topo
   ];
 
   const produtosSubItems = visibleByPermission([
@@ -95,11 +94,7 @@ const Navbar = () => {
               </NavigationMenu>
             )}
 
-            <Link to="/contato">
-              <Button className="ml-2 bg-accent hover:bg-accent/90 text-accent-foreground">
-                Fale Conosco
-              </Button>
-            </Link>
+            
           </div>
 
           {/* Mobile Menu Button */}
@@ -161,9 +156,7 @@ const Navbar = () => {
                 </div>
               )}
 
-              <Link to="/contato" onClick={() => setIsOpen(false)}>
-                <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">Fale Conosco</Button>
-              </Link>
+              
             </div>
           </div>
         )}
@@ -173,3 +166,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

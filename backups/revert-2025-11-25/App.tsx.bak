@@ -9,7 +9,6 @@ import Tecnologias from "./pages/Tecnologias";
 import Servicos from "./pages/Servicos";
 import Compliance from "./pages/Compliance";
 import NotFound from "./pages/NotFound";
-import Contato from "./pages/Contato";
 import ProdutosCadastro from "./pages/ProdutosCadastro";
 import ProdutosListagem from "./pages/ProdutosListagem";
 import ProdutosCategorias from "./pages/ProdutosCategorias";
@@ -30,7 +29,6 @@ const App = () => (
           <Route path="/tecnologias" element={<Tecnologias />} />
           <Route path="/servicos" element={<Servicos />} />
           <Route path="/compliance" element={<Compliance />} />
-          <Route path="/contato" element={<Contato />} />
           <Route
             path="/produtos/cadastro"
             element={
@@ -72,3 +70,4 @@ const App = () => (
 );
 
 export default App;
+
