@@ -58,15 +58,15 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <Phone className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                <span className="text-white/70 text-sm">+55 (11) 1234-5678</span>
+                <span className="text-white/70 text-sm">+55 (18) 3654-2000</span>
               </li>
               <li className="flex items-start space-x-3">
                 <Mail className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                <span className="text-white/70 text-sm">contato@solucoesindustriais.com.br</span>
+                <span className="text-white/70 text-sm">comercial@retesp.com.br</span>
               </li>
               <li className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                <span className="text-white/70 text-sm">São Paulo, SP - Brasil</span>
+                <span className="text-white/70 text-sm">Penápolis, SP - Brasil</span>
               </li>
             </ul>
           </div>
@@ -75,7 +75,7 @@ const Footer = () => {
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-white/60 text-sm">
-              © {new Date().getFullYear()} Soluções Industriais. Todos os direitos reservados.
+              © {new Date().getFullYear()} RETESP. Todos os direitos reservados.
             </p>
             <div className="flex space-x-6 text-sm text-white/60">
               <Link to="/privacidade" className="hover:text-accent transition-colors">
